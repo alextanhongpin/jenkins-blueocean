@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  ci:
+    image: jenkinsci/blueocean:1.23.2
+    ports:
+      - 127.0.0.1:8080:8080
+      - 127.0.0.1:50000:50000
+    volumes:
+      - ./tmp/jenkins_home:/var/jenkins_home
